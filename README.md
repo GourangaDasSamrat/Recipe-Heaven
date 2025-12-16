@@ -4,7 +4,7 @@
 
 ### Email: gouranga.das.khulna@gmail.com
 
-[ Live url](https://recipe-haven-kappa.vercel.app/)
+[ Live url](https://recipe-heaven-me.netlify.app)
 
 ## Tech used
 
