@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Heaven - Discover Amazing Recipes</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader">
+        <div class="pizza-slice"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-utensils"></i>
+          Recipe Heaven
+        </div>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-box"
+            id="searchInput"
+            placeholder="Search for recipes..."
+          />
+          <button class="search-btn" onclick="searchRecipes()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Discover Delicious Recipes</h1>
+      <p>From quick weeknight dinners to impressive desserts</p>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="loadRandomRecipes()">
+          All Recipes
+        </button>
+        <button class="filter-btn" onclick="filterByCategory('Breakfast')">
+          Breakfast
+        </button>
+        <button class="filter-btn" onclick="filterByCategory('Dessert')">
+          Desserts
+        </button>
+        <button class="filter-btn" onclick="filterByCategory('Vegetarian')">
+          Vegetarian
+        </button>
+        <button class="filter-btn" onclick="filterByCategory('Seafood')">
+          Seafood
+        </button>
+      </div>
+
+      <div id="meal"></div>
+
+      <div class="load-more-container">
+        <button class="load-more-btn" onclick="loadMoreRecipes()">
+          <i class="fas fa-plus-circle"></i> Load More Recipes
+        </button>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="recipeModal"
+      class="modal"
+      onclick="closeModalOnOutsideClick(event)"
+    >
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 Recipe Heaven by Gouranga Das Samrat. All rights reserved.
+        Made with ❤️ and 🍕
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/html2pdf.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
