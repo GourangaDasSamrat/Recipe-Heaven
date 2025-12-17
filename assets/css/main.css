@@ -15,13 +15,12 @@
   --dark: #2d3436;
   --light: #dfe6e9;
   --white: #ffffff;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow: 0 10px 30px rgba(0,0,0,0.1);
   --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 body {
-  font-family: "Founders Grotesk Regular", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: "Founders Grotesk Regular", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--dark);
   min-height: 100vh;
@@ -62,7 +61,7 @@ body {
 }
 
 .pizza-slice::before {
-  content: "🍕";
+  content: '🍕';
   font-size: 80px;
   position: absolute;
   top: 50%;
@@ -71,12 +70,8 @@ body {
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Header */
@@ -110,6 +105,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  position: relative;
 }
 
 .logo {
@@ -122,6 +118,7 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  z-index: 101;
 }
 
 .logo i {
@@ -129,6 +126,35 @@ nav {
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: var(--gradient);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .search-container {
@@ -188,7 +214,7 @@ nav {
 }
 
 .nav-links a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -211,20 +237,14 @@ nav {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero p {
@@ -261,8 +281,7 @@ main {
   font-weight: 500;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn:hover, .filter-btn.active {
   background: var(--gradient);
   color: white;
   border-color: transparent;
@@ -311,7 +330,7 @@ main {
 
 .recipe-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .recipe-card img {
@@ -465,7 +484,7 @@ main {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -520,7 +539,7 @@ main {
 
 .action-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Load More Button */
@@ -553,7 +572,7 @@ footer {
   margin-top: 4rem;
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
 }
 
 footer p {
@@ -582,9 +601,7 @@ footer p {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* Error Message */
@@ -648,6 +665,57 @@ footer p {
 }
 
 /* Responsive */
+@media (max-width: 968px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .search-container {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
@@ -655,14 +723,6 @@ footer p {
 
   .hero p {
     font-size: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-
-  .search-container {
-    max-width: 100%;
   }
 
   #meal {
@@ -676,5 +736,37 @@ footer p {
 
   .action-btn {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 80%;
+  }
+
+  .filter-bar {
+    padding: 1rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  #meal {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo i {
+    font-size: 1.7rem;
   }
 }

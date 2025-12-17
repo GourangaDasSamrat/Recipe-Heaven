@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <!-- title -->
     <title>About Us - Recipe Heaven</title>
+
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -20,10 +42,17 @@
           <i class="fas fa-utensils"></i>
           Recipe Heaven
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="./about.html" class="active">About</a></li>
-          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="index.html#recipes">Recipes</a></li>
         </ul>
       </nav>
     </header>
@@ -225,7 +254,7 @@
         <div class="cta-content">
           <h2>Ready to Start Cooking?</h2>
           <p>Join thousands of home cooks discovering new recipes every day</p>
-          <a href="index.html" class="cta-btn">
+          <a href="../index.html" class="cta-btn">
             <i class="fas fa-utensils"></i>
             Explore Recipes
           </a>
@@ -245,18 +274,26 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#recipes">Recipes</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="index.html#recipes">Recipes</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Follow Us</h3>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/gourangadassamrat/"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://github.com/GourangaDasSamrat/"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://x.com/Gouranga_Khulna/"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/gouranga-das-samrat/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -267,5 +304,8 @@
         </p>
       </div>
     </footer>
+
+    <!-- Script -->
+    <script src="../assets/js/menu.js"></script>
   </body>
 </html>

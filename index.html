@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO Keywords -->
     <meta name="keywords" content="Recipe Haven. recipe app, meals, recipe" />
 
@@ -78,6 +79,7 @@
           <i class="fas fa-utensils"></i>
           Recipe Heaven
         </div>
+
         <div class="search-container">
           <input
             type="text"
@@ -89,10 +91,17 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <ul class="nav-links">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#recipes">Recipes</a></li>
+          <li><a href="./pages/about.html">About</a></li>
         </ul>
       </nav>
     </header>
@@ -105,26 +114,30 @@
 
     <!-- Main Content -->
     <main>
-      <div class="filter-bar">
-        <button class="filter-btn active" onclick="loadRandomRecipes()">
+      <div class="filter-bar" id="recipes">
+        <button class="filter-btn active" onclick="loadRandomRecipes(event)">
           All Recipes
         </button>
-        <button class="filter-btn" onclick="filterByCategory('Breakfast')">
+        <button
+          class="filter-btn"
+          onclick="filterByCategory('Breakfast', event)"
+        >
           Breakfast
         </button>
-        <button class="filter-btn" onclick="filterByCategory('Dessert')">
+        <button class="filter-btn" onclick="filterByCategory('Dessert', event)">
           Desserts
         </button>
-        <button class="filter-btn" onclick="filterByCategory('Vegetarian')">
+        <button
+          class="filter-btn"
+          onclick="filterByCategory('Vegetarian', event)"
+        >
           Vegetarian
         </button>
-        <button class="filter-btn" onclick="filterByCategory('Seafood')">
+        <button class="filter-btn" onclick="filterByCategory('Seafood', event)">
           Seafood
         </button>
       </div>
-
       <div id="meal"></div>
-
       <div class="load-more-container">
         <button class="load-more-btn" onclick="loadMoreRecipes()">
           <i class="fas fa-plus-circle"></i> Load More Recipes
@@ -150,13 +163,14 @@
     <!-- Footer -->
     <footer>
       <p>
-        &copy; 2025 Recipe Heaven by Gouranga Das Samrat. All rights reserved.
-        Made with ❤️ and 🍕
+        &copy; 2025 Recipe Heaven by Gouranga. All rights reserved. Made with ❤️
+        and 🍕
       </p>
     </footer>
 
     <!-- Scripts -->
     <script src="./assets/js/html2pdf.bundle.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
