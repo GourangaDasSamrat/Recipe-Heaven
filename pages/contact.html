@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <!-- title -->
+    <title>Contact Us - Recipe Heaven</title>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-utensils"></i>
+          Recipe Heaven
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="fade-in">Get In Touch</h1>
+        <p class="fade-in-delay">We'd love to hear from you!</p>
+        <div class="hero-icon fade-in-delay-2">
+          <i class="fas fa-envelope"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <p>
+              Have a question, suggestion, or just want to say hello? We're here
+              to help!
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Visit Us</h3>
+                  <p>
+                    123 Recipe Street<br />Food City, FC 12345<br />Culinary
+                    Kingdom
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Call Us</h3>
+                  <p>
+                    +1 (555) 123-4567<br />Mon-Fri: 9AM - 6PM<br />Sat: 10AM -
+                    4PM
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Email Us</h3>
+                  <p>
+                    info@recipeheaven.com<br />support@recipeheaven.com<br />We
+                    reply within 24 hours
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Working Hours</h3>
+                  <p>
+                    Monday - Friday: 9AM - 6PM<br />Saturday: 10AM - 4PM<br />Sunday:
+                    Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-section">
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="https://www.facebook.com/gourangadassamrat/"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://github.com/GourangaDasSamrat/"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://x.com/Gouranga_Khulna/"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/gouranga-das-samrat/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <div class="form-header">
+              <h2>Send Us a Message</h2>
+              <p>Fill out the form below and we'll get back to you soon</p>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contactForm"
+              onsubmit="handleSubmit(event)"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">
+                    <i class="fas fa-user"></i> First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    placeholder="John"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">
+                    <i class="fas fa-user"></i> Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="johndoe@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">
+                  <i class="fas fa-phone"></i> Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i> Subject
+                </label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="recipe">Recipe Suggestion</option>
+                  <option value="support">Technical Support</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment-dots"></i> Your Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Tell us what's on your mind..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+
+            <div
+              id="successMessage"
+              class="success-message"
+              style="display: none"
+            >
+              <i class="fas fa-check-circle"></i>
+              <h3>Message Sent Successfully!</h3>
+              <p>
+                Thank you for reaching out. We'll get back to you within 24
+                hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="section-title">Find Us Here</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215876179534!2d-73.98731492346654!3d40.748817671387565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1702896545678!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>How do I submit my own recipe?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We love receiving recipe submissions! Simply use the contact
+                form above and select "Recipe Suggestion" as the subject.
+                Include the recipe details in your message, and our culinary
+                team will review it.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Are all recipes free to access?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes! All recipes on Recipe Heaven are 100% free to access, view,
+                and download. We believe great food should be accessible to
+                everyone.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Can I download recipes in PDF format?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! Each recipe has a "Download PDF" button that allows
+                you to save it for offline use or printing.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>How often do you add new recipes?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We update our recipe database regularly with fresh content.
+                Visit frequently to discover new dishes from around the world!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-utensils"></i> Recipe Heaven</h3>
+          <p>
+            Your culinary companion for discovering and creating amazing dishes.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/gourangadassamrat/"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://github.com/GourangaDasSamrat/"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://x.com/Gouranga_Khulna/"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/gouranga-das-samrat/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Recipe Heaven by Gouranga. All rights reserved. Made with
+          ❤️ and 🍕
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/form.js"></script>
+  </body>
+</html>
