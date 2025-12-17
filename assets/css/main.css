@@ -20,7 +20,8 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Founders Grotesk Regular", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--dark);
   min-height: 100vh;
