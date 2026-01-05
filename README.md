@@ -1,15 +1,3 @@
-# Assignment-4
-
-### Name : Gouranga Das Samrat
-
-### Email: gouranga.das.khulna@gmail.com
-
-[ Live url](https://recipe-heaven-me.netlify.app)
-
----
-
----
-
 # 🍽️ Recipe Heaven
 
 <div align="center">
